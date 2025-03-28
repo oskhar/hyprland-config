@@ -15,7 +15,7 @@ config.load_autoconfig()
 catppuccin.setup(c, 'mocha', True)
 
 # Aktifkan dark mode untuk halaman web
-c.colors.webpage.darkmode.enabled = True
+# c.colors.webpage.darkmode.enabled = True
 
 # Gunakan kebijakan dark mode yang pintar
 c.colors.webpage.darkmode.policy.page = 'smart'
@@ -33,9 +33,11 @@ c.content.blocking.adblock.lists = [
     'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt'
 ]
 
+c.content.blocking.hosts.lists = ["file:///home/oskhar/.config/qutebrowser/hosts"]
+
 # Shortcut untuk memindahkan posisi tab
-config.bind('<Ctrl-Shift-k>', 'tab-move -1')  # Pindahkan tab ke kiri
-config.bind('<Ctrl-Shift-j>', 'tab-move +1')  # Pindahkan tab ke kanan
+config.bind('<Ctrl-Shift-k>', 'tab-move -')  # Pindahkan tab ke kiri
+config.bind('<Ctrl-Shift-j>', 'tab-move +')  # Pindahkan tab ke kanan
 
 
 # c.content.user_stylesheets = "~/.qutebrowser/style.css"
@@ -199,3 +201,8 @@ config.bind('<Return>', 'fake-key <Return> ;; mode-leave', mode='insert')
 
 # Pastikan Shift+Enter tetap berada dalam mode insert
 config.bind('<Shift+Return>', 'fake-key <Shift+Return>', mode='insert')
+
+config.bind('<Ctrl+w>', 'fake-key <Ctrl+Backspace>', mode='insert')
+
+config.bind('<Ctrl+c>', 'mode-leave', mode='insert')
+config.bind('<Ctrl+Shift+c>', 'fake-key <Ctrl+c>', mode='insert')

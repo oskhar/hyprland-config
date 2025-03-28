@@ -19,11 +19,10 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:teal bg:teal)\
 $docker_context\
-[](fg:teal bg:maroon)\
-$time\
-[ ](fg:maroon)\
+[](fg:teal bg:red)\
+$gcloud\
+[ ](fg:red)\
 $line_break$character"""
 
 palette = 'catppuccin_mocha'
@@ -105,6 +104,11 @@ format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
+[gcloud]
+format = '[[ $symbol $account (\(≡ $project\))](fg:base bg:red)]($style)'
+style = "bg:teal"
+symbol = ""
+
 [directory.substitutions]
 "Documents" = "󰈙 "
 "Downloads" = " "
@@ -175,7 +179,7 @@ format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
 disabled = false
 time_format = "%R"
 style = "bg:peach"
-format = '[[  $time ](fg:mantle bg:maroon)]($style)'
+format = '[[  $time ](fg:mantle bg:red)]($style)'
 
 [line_break]
 disabled = false

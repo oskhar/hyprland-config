@@ -14,14 +14,63 @@ settings:
     global: false
   content.blocking.enabled:
     global: true
+  content.cookies.accept:
+    global: no-3rdparty
+    https://pos.ketoko.co.id/home: no-3rdparty
+  content.cookies.store:
+    global: true
+  content.geolocation:
+    https://www.firgelliauto.com: false
   content.javascript.clipboard:
     global: access
   content.javascript.enabled:
     global: true
+  content.media.audio_capture:
+    global: ask
+    https://chatgpt.com: false
+    https://discord.com: true
+    https://meet.google.com: true
+    https://teams.microsoft.com: true
+    https://web.skype.com: true
+  content.media.audio_video_capture:
+    global: ask
+    https://meet.google.com: true
+    https://teams.microsoft.com: true
+    https://web.skype.com: true
+  content.media.video_capture:
+    https://meet.google.com: true
+    https://teams.microsoft.com: true
+    https://web.skype.com: true
+    https://web.whatsapp.com: true
   content.notifications.enabled:
+    https://colab.research.google.com: false
+    https://internetbaik.telkomsel.com: false
+    https://money.kompas.com: false
+    https://my.telkomsel.com: false
     https://otakudesu.cloud: false
+    https://ouo.io: false
+    https://ouo.press: false
     https://pos.ketoko.co.id: true
+    https://promo.gramedia.com: false
+    https://samehadaku.ac: false
+    https://shopee.co.id: false
+    https://sp.universal-music.co.jp: false
+    https://teams.microsoft.com: true
+    https://upfiles-urls.com: false
+    https://web.skype.com: false
+    https://wwd.mp3juice.blog: false
+    https://www.blibli.com: false
+    https://www.chess.com: false
+    https://www.gramedia.com: false
+    https://www.kompas.com: false
+    https://www.telkomsel.com: false
+    https://www.tiktok.com: false
     https://y2mate.nu: false
+  content.register_protocol_handler:
+    global: ask
+    https://mail.google.com?extsrc=mailto&url=%25s: true
+    https://outlook.live.com?mailtouri=%25s: false
+    https://outlook.office365.com?mailtouri=%25s: false
   url.default_page:
     global: https://www.google.com
   window.transparent:
